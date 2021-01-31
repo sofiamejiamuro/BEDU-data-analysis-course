@@ -1,4 +1,4 @@
-### Session notes
+# Session notes
 
 ```sql
 SHOW DATABASES;
