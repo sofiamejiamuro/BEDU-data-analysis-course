@@ -1,5 +1,6 @@
 # Session notes
 
+## Examples
 ```sql
 SHOW DATABASES;
 USE tienda;
@@ -24,26 +25,49 @@ DESCRIBE puesto;
 DESCRIBE empleado;
 USE tienda;
 SELECT * FROM puesto;
-# 1
-SELECT * FROM empleado WHERE id_puesto = 4;
-# 2
-SELECT nombre FROM puesto WHERE salario > 10000;
-SELECT * FROM articulo;
-# 3
-SELECT nombre FROM articulo WHERE precio > 1000 AND iva > 100;
-SELECT * FROM venta;
-# 4
-SELECT id_venta FROM venta WHERE id_articulo = 135 OR id_articulo = 963 AND id_empleado = 835 OR id_empleado = 369; 
 ```
 
-RETO 02
+## Concepts
+
+- Jerarquía de operaciones
+
+## Practice
+
+**RETO 02**
 
 - ¿Cuál es el nombre de los empleados con el puesto 4?
-  Staff Scientist
+```sql
+SELECT * FROM empleado WHERE id_puesto = 4;
+```
 - ¿Qué puestos tienen un salario mayor a $10,000?
-  36
+```sql
+SELECT nombre FROM puesto WHERE salario > 10000;
+```
 - ¿Qué articulos tienen un precio mayor a $1,000 y un iva mayor a 100?
-  mayo a mil 38 , 41, cuarenta arituclos
+```sql
+SELECT * FROM articulo;
+SELECT nombre FROM articulo WHERE precio > 1000 AND iva > 100;
+```
 - ¿Qué ventas incluyen los artículo 135 o 963 y fueron hechas por los empleados 835 o 369?
+```sql
+SELECT * FROM venta;
+SELECT id_venta FROM venta WHERE id_articulo = 135 OR id_articulo = 963 AND id_empleado = 835 OR id_empleado = 369; 
+```
+**RETO 03**
 
-Jerarquía de operaciones
+Usando la base de datos kavak, escribe las consultas que permita responder las siguientes preguntas.
+
+- ¿De que año es el auto más antiguo?
+```sql
+SELECT name, year FROM kavak.car ORDER BY year ASC;
+SELECT name, year FROM kavak.car ORDER BY year ASC LIMIT 1;
+SELECT name, year FROM kavak.car ORDER BY year, name ASC;
+```
+- ¿Cuál son los 3 autos con mayor kilometraje?
+```sql
+SELECT name, km FROM kavak.car ORDER BY km DESC LIMIT 3;
+```
+- ¿Cuál es el auto que lleva más tiempo sin venderse?
+```sql
+SELECT name, post_date FROM kavak.car ORDER BY post_date ASC LIMIT 1;
+```

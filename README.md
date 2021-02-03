@@ -1,12 +1,12 @@
 # DATA ANALYST COURSE
 
-This repo contains notes and exercises made during the course Data Analyst by [BEDU](https://bedu.org/cursos/data-analysis/), as well it contains notes from other resources and courses related to the course topic: [Curso de SQL y MySQL-Platzi](https://platzi.com/clases/sql-mysql/).
+This repo contains notes and exercises made during the course Data Analyst by [BEDU](https://bedu.org/cursos/data-analysis/), as well it contains notes from other resources and courses related to the course topic: [Curso de SQL y MySQL-Platzi](https://platzi.com/clases/sql-mysql/), [Fundamentos de bases de datos](https://platzi.com/clases/bd/)
 
 # Syllabus BEDU 
  
 ## Introducción a bases de Datos
-- [ ] Fundamentos de SQL
-- [ ] Agrupaciones y subconsultas
+- [x] Fundamentos de SQL
+- [x] Agrupaciones y subconsultas
 - [ ] Joisn y Vistas
 - [ ] Fundamentos de Mongo DB
 - [ ] Agregaciones

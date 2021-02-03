@@ -16,7 +16,7 @@ SELECT contactFirstName FROM customers WHERE contactFirstName LIKE 'S_';
 SELECT contactFirstName FROM customers WHERE contactFirstName LIKE '_____';
 ```
 
-## Functions
+## Functions
 
 [MySQL functions](https://www.techonthenet.com/mysql/functions/)
 
