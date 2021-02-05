@@ -7,7 +7,7 @@ This directory contains notes and exercises made during the course Data Analyst 
 ## Introducción a bases de Datos
 - [x] Fundamentos de SQL
 - [x] Agrupaciones y subconsultas
-- [ ] Joisn y Vistas
+- [ ] Joins y Vistas
 - [ ] Fundamentos de Mongo DB
 - [ ] Agregaciones
 - [ ] Configuración de Bases de Datos Locales
