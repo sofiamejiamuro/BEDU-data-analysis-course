@@ -24,24 +24,28 @@ SELECT name, model FROM car WHERE model LIKE '____';
 
 **RETO 02**
 
-- ¿Cuál es el promedio un auto en Kavak?
+1. ¿Cuál es el promedio un auto en Kavak?
 ```sql
 SELECT avg(price) AS 'promedio' FROM car; 
 ```
-- ¿Cuántos artículos según su nomre son de 1.6l?
+2. ¿Cuántos artículos según su nomre son de 1.6l?
 ```sql
 SELECT count(name) AS 'articuos de 1.6l' FROM car WHERE name LIKE '%1.6l%';
 ```
-- ¿Cuál es el precio mínimo y máximo de todos los autos?
+3. ¿Cuál es el precio mínimo y máximo de todos los autos?
 ```sql
 SELECT min(price) AS 'precio minimo' FROM car;
 SELECT max(price) AS 'precio minimo' FROM car;
 ```
-- ¿Cuál es la suma del precio de los tres autos más caros?
+4. ¿Cuál es la suma del precio de los tres autos más caros?
 Buscar en la subconsulta
-//Incorrecto
 ```sql
-SELECT avg(price) AS 'precio minimo' FROM car ORDER BY price DESC LIMIT 3;
+# Correct
+SELECT sum(price) FROM car WHERE id IN (4167, 413, 4474);
+# 3967997
+# Incorrect It is not the same results as sum(price) as it is adding all the price value and returns only one value
+SELECT sum(price) AS 'precio minimo' FROM car ORDER BY price DESC LIMIT 3;
+# 1590540519
 ```
 
 ***RETO - 03**

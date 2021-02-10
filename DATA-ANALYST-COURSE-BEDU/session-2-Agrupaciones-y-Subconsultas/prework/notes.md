@@ -5,9 +5,7 @@
 ```sql
 SELECT contactFirstName FROM customers WHERE contactFirstName LIKE 's%';
 ```
-```sql
-SELECT contactFirstName FROM customers WHERE contactFirstName NOT LIKE '%e';
-```
+
 ```sql
 SELECT contactFirstName FROM customers WHERE contactFirstName LIKE '%sU%';
 ```
@@ -18,6 +16,8 @@ SELECT contactFirstName FROM customers WHERE contactFirstName LIKE '_____';
 
 ## Functions
 
+Grouping functions make arithmetic operations within a column and return a single value.
+  
 [MySQL functions](https://www.techonthenet.com/mysql/functions/)
 
 ```sql
@@ -65,8 +65,54 @@ SELECT shippedDate, count(*) 'Nùmero de envios por día' FROM orders GROUP BY s
 
 ## Subquery
 
-### Subquery escalonada
+A subquery is a query inside a query, they may appear on tha clause WHERE, FROM and SELECT
 
+Examples:
+**WHERE**
+1. Get the employees which position is 'Junior Executive'
+```sql
+SELECT * FROM empleado;
+# From this query we only obtain the id of the position and the employee information 
+```
+```sql
+SELECT * FROM puesto;
+# From this query we obtain de id and the name 
+```
+```sql
+SELECT id_puesto FROM puesto WHERE nombre = 'Junior Executive';
+```
+Now once we have the id of the position it is possibly to make the asked query.
+```sql
+SELECT * FROM empleado WHERE id_puesto IN
+  (SELECT id_puesto FROM puesto WHERE nombre = 'Junior Executive');
+```
+
+**FROM**
+1. Obtain the sales average of each article
+
+```sql
+SELECT id_articulo, COUNT(*) AS ventas FROM tienda.venta GROUP BY id_articulo;
+# Get the number of sales by article
+```
+
+```sql
+SELECT AVG(ventas) AS ventas_promedio_por_articulo
+FROM
+   (SELECT
+   id_articulo,
+   COUNT(*) AS ventas
+   FROM tienda.venta
+   GROUP BY id_articulo) AS numero_de_ventas;
+```
+
+**SELECT**
+1. Obtain the salary of each epmloyee
+```sql
+SELECT nombre, apellido_paterno, (SELECT salario FROM puesto WHERE id_puesto = e.id_puesto) AS sueldo
+FROM empleado AS e;	
+```
+
+### Subquery escalonada
 Exercise:
 
 A query that obtains the productName and productLine of the produts which price is more than the average
@@ -81,3 +127,4 @@ SELECT avg(MSRP) AS 'media de precio' FROM products;
 ```sql
 SELECT productName, productLine FROM products WHERE MSRP > (SELECT avg(MSRP) FROM products);
 ```
+
