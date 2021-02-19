@@ -51,17 +51,17 @@ SELECT avg(amount) AS 'promedio salarios más altos' FROM payments WHERE amount 
 SELECT status, count(*) "Numero de ordenes según su estatus" FROM orders GROUP BY status;
 ```
 
-![i.e. 1](../../assets/session-2/s2-prew-img-1.png)
+![i.e. 1](../../assets/s2-prew-img-1.png)
 
 ```sql
 SELECT orderDate, count(*) 'Número de ordenes por día' FROM orders GROUP BY orderDate;
 ```
-![i.e. 2](../../assets/session-2/s2-prew-img-2.png)
+![i.e. 2](../../assets/s2-prew-img-2.png)
 
 ```sql
 SELECT shippedDate, count(*) 'Nùmero de envios por día' FROM orders GROUP BY shippedDate;
 ```
-![i.e. 3](../../assets/session-2/s2-prew-img-3.png)
+![i.e. 3](../../assets/s2-prew-img-3.png)
 
 ## Subquery
 

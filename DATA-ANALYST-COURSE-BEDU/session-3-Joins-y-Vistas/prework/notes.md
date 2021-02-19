@@ -12,17 +12,17 @@ Una tabla puede tener varios campos como llaves primarias.
 
 1. 1:N
 
-![1:N](../../assets/session-2/s3-prew-img-1.png)
+![1:N](../../assets/s3-prew-img-1.png)
 
 2. N:N
 
 Este tipo de relación permite unir dos tablas que en un principio no tienen relación directa.
 
-![N:N](../../assets/session-2/s3-prew-img-2.png)
+![N:N](../../assets/s3-prew-img-2.png)
 
 3. 1:1 Esta relación indica que ninguna tabla puede repetir registros de otra
 
-![N:N](../../assets/session-2/s3-prew-img-3.png)
+![N:N](../../assets/s3-prew-img-3.png)
 
 ## JOINS
 

@@ -19,4 +19,3 @@ Return a new column that shows the results of counting all the car which name in
 SELECT count(name) AS 'articuos de 1.6l' FROM car WHERE name LIKE '%1.6l%';
 # The return is a single column with a single value. 
 ```
-

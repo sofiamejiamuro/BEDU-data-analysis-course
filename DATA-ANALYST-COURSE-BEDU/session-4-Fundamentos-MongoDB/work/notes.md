@@ -13,9 +13,9 @@
 }
 ```
 
-## Consultas
+# Consultas
 
-### Proyecciones
+## Proyecciones
 
 No me mandes 0, mandame 1 la llave 'x'
 
@@ -37,15 +37,21 @@ PROJECT {'title': 0}
 {"name":1, "password":1}
 ```
 
-### Filtrado
+## Filtrado
+```json
+FILTER  {year:1990}
+PROJECT {year:1990}
+```
 
-FILTER  {"year":2000}
-PROJECT {"title":1, "cast":1, "year":1}
+## Operadores
 
-### Operadores
+**$gt greater**
+**$gte greater or equal**
 
-$gt greater
-$gte greater or equal
+```json
+FILTER {year:{$gt:2000}}
+FILTER {year:{$gte:2000}}
+```
 
 ```json
 {
@@ -54,22 +60,20 @@ $gte greater or equal
   }
 }
 ```
+
+**$and**
+
+Los documentos que matchen ambas condiciones
 ```json
-{
-  "$and":[
-    {
-      "year":{
-        "$gt":2010
-      }
-    },
-    {
-      "year":{
-        "$lt":2015
-      }
-    },
-  ]
-}
+FILTER {$and:[{year:{$gte:1995}},{director:Godard}]}
 ```
+**$or**
+
+O cumple una o cumple otra condición 
+```json
+FILTER {$or:[{year:2000},{year:1925}]}
+```
+
 ```json
 {
   "$or":[
@@ -82,33 +86,42 @@ $gte greater or equal
   ]
 }
 ```
-### Ordenamiento
+## Ordenamiento
 1 --> ASC
 
 -1 --> DESC
 
-SORT {"year":1 }
+```json
+SORT {year:1 }
+```
+
+## Limit
+
+```json
+LIMIT {year:1}
+```
 
 **RETO 02**
 
 1. ¿Qué comentarios ha hecho Greg Powell?
-```
+```json
 FILTER {"name":"Greg Powell"}
 PROJECT {"name":1, "text":1}
 ```
 2. ¿Qué comentarios han hecho Greg Powell o Mercedes Tyler?
-```
+```json
 FILTER: {$or:[{"name":"Greg Powell"},{"name":"Mercedes Tyler"}]}
 PROJECT: {"name":1, "text":1, "date":1}
 SORT: {date: 1}
 ```
 3. ¿Cuál es el máximo número de comentarios en una película?
-```
-SORT {num_mflix_comments: 1}	
+```json
+PROJECT {num_mflix_comments:1}
+SORT {num_mflix_comments: -1}	
 ```
 4. ¿Cuál es título de las cinco películas más comentadas?
-```
-FILTER {title: 1}	
+```json
+PROJECT {num_mflix_comments:1, title:1}
 SORT {num_mflix_comments: -1}
 LIMIT 5
 ```
