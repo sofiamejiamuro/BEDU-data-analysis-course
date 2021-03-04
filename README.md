@@ -8,13 +8,13 @@ This repo contains notes and exercises made during the course Data Analyst by [B
 - [x] Fundamentos de SQL
 - [x] Agrupaciones y subconsultas
 - [x] Joins y Vistas
-- [ ] Fundamentos de Mongo DB
-- [ ] Agregaciones
-- [ ] Configuración de Bases de Datos Locales
-- [ ] Query Competition
+- [x] Fundamentos de Mongo DB
+- [x] Agregaciones
+- [x] Configuración de Bases de Datos Locales
+- [x] Query Competition
 
 ## Estadística y Programción con R
-- [ ] Propedútico
+- [x] Propedéutico
 - [ ] Programación con Objetos, Funciones, Condiciones y Loops
 - [ ] Utilización de Scripts en R con aplicaciones para el análisis de datos
 - [ ] Integración de R con Bases de datos SQL, MongoDB y datos de dominio público (URLs)
