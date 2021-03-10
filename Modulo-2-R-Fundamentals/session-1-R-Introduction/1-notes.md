@@ -1,6 +1,6 @@
 # Introducción 
 
-## Instalación
+## Instalación
 
 [R](https://cran.itam.mx/index.html)
 
@@ -49,4 +49,73 @@ R tiene un límite de representación de números
 
 **-**
 
+## Tipos de datos
 
+- Numeric:
+  - Integer(enteros) : L
+  - Float(decimales)
+
+- Complex: Números complejos con números imagianrios 1+4i...
+- Logical: True or False
+- Character: Strings
+
+
+Identificar el tipo de dato:
+```r
+is.integer()
+is.numeric()
+is.logical()
+is.character()
+```
+
+```r
+class()
+typeof()
+```
+
+
+Cambiar el tipo de dato:
+```r
+as.integer()
+as.numeric()
+as.logical()
+as.character()
+```
+
+## Estructuras
+
+Las estructuras son la forma en que organizamos los diferentes tipos de datos que hay
+
+- **Vectores**: Estos son valores que sólo están en una dimensión (Esto quiere decir que están en una línea y no forman tablas con columnas ni filas). Normalmente se crean con la función c(). Esto hace que lo que esté dentro del paréntesis se convierta en un vector. Con los vectores se pueden hacer operaciones aritméticas y ÚNICAMENTE pueden ser del mismo tipo de dato.
+
+```r
+x <- c(24, 55,66,84)
+```
+
+-**Listas**:Las listas son igual a los vectores, pero lo que difiere de ellos es que estas sí pueden guardar diferentes tipos de datos. Estas se pueden crear usando la función list().
+
+```r
+x <- list(24, “55”,2.5, c(2,3))
+```
+
+-**Matrix**:Las matrices son datos estructurados en dos dimensiones: columnas y filas. Estas se pueden crear con la función matrix() y al igual que los vectores, únicamente pueden guardar 1 mismo tipo de dato.
+
+```r
+x <- matrix(1 : 9, byrow = TRUE, nrow = 3) 
+```
+
+# Session 1 class
+
+Instructor: Erick Coronado Juárez
+
+Tarea: ¿Cuál es la diferencia entre class() y typeof()?
+
+Reciclado de variables en operaciones con vectores y matrices
+
+
+REvizar rbind() para mezclar matrices
+
+
+Llamar por nombre a la columna
+
+rehacer nombres de archivos de ejercicio  a sesion-1
