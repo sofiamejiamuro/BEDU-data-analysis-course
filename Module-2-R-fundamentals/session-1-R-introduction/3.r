@@ -18,7 +18,7 @@
 # Listas
 
 (milista <- list(nombre = "Pepe", no.hijos = 3, edades.hijos = c(4, 7, 9)))
-
+milista
 # propiedades de la lista
 
 str(milista)
@@ -30,10 +30,14 @@ milista$nombre
 # Creando data frames
 
 x <- 6:8
+x
 y <- c("A", "B", "C")
+y
 (mifile <- data.frame(edad = x, grupo = y))
-
+mifile
+#str stands for structure
 str(mifile)
+
 
 # Extrayendo información del df, se hace igual que con las matrices
 mifile

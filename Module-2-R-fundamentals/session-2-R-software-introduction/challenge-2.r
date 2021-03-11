@@ -30,3 +30,7 @@ summary(x)
 
 # Hace la gráfica
 plot(x)
+
+#Informacion que viene para ejercicio en R
+?mtcars
+?iris

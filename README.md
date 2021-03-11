@@ -15,7 +15,7 @@ This repo contains notes and exercises made during the course Data Analyst by [B
 
 ## Estadística y Programción con R
 - [x] Propedéutico
-- [ ] Programación con Objetos, Funciones, Condiciones y Loops
+- [x] Programación con Objetos, Funciones, Condiciones y Loops
 - [ ] Utilización de Scripts en R con aplicaciones para el análisis de datos
 - [ ] Integración de R con Bases de datos SQL, MongoDB y datos de dominio público (URLs)
 - [ ] Estadística I. Análisis Exploratorio de datos: Análisis univariado y multivariado

@@ -104,7 +104,43 @@ x <- list(24, “55”,2.5, c(2,3))
 x <- matrix(1 : 9, byrow = TRUE, nrow = 3) 
 ```
 
-# Session 1 class
+Para conocer los argumentos de la función matrix()
+```r
+?matrix
+```
+
+-**Data Frames** son datos organizados en dos dimensiones: columnas y filas. Son igual que las matrices pero pueden guardar diferentes tipos de datos.
+
+-**Funciones** convierten una entrada o dato, lo procesan y arrojan un resultado
+
+## Paquetes
+
+Se instala el paquete que se necesita, con hacerlo una vez es suficiente
+
+```r
+install.packages(“ggplot2”)
+```
+
+Se manda llamar en el archivo que lo vaya a ocupar
+```r
+library(ggplot2)
+```
+
+## Funciones
+
+Para poder crear una función, hay qeu conocer su estructura:
+- Nombre de la función
+- Argumentos
+- Cuerpo
+- Resultado
+
+```r
+saludo <- function(nombre){ mensaje <- paste(“Hola”, nombre) return(mensaje)
+}
+saludo(“Ana”) 
+saludo(“Pablo”)
+```
+## class
 
 Instructor: Erick Coronado Juárez
 
@@ -112,10 +148,8 @@ Tarea: ¿Cuál es la diferencia entre class() y typeof()?
 
 Reciclado de variables en operaciones con vectores y matrices
 
+[x] Revisar rbind() para mezclar matrices
 
-REvizar rbind() para mezclar matrices
+[x] Llamar por nombre a la columna
 
-
-Llamar por nombre a la columna
-
-rehacer nombres de archivos de ejercicio  a sesion-1
+[x] Actualizar nombres de los archivos

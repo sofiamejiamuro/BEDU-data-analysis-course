@@ -36,6 +36,7 @@ typeof(var.logical)
 
 a <- c(4, 6, 8, 10,12)
 b <- c(3, 5, 7, 9)
+a
 
 # Para saber la longitud del vector
 
@@ -46,6 +47,7 @@ length(b)
 # Se puede acceder a las coordenadas de un vector haciendo uso de [] y su posición
 
 a[1]
+a[5]
 b[4]
 
 # Para unir 2 vectores
@@ -54,11 +56,14 @@ c(a,b)
 
 # Organizarlos con la función sort, cambia la F por T y observa que ocurre
 
-sort(c(a,b), decreasing = F)
+sort(c(a,b), decreasing = T)
 
 # Otra forma de generar el vector es de la siguiente manera, utilizando ":"
 
-3:12  # así de sencillo es
+3:12 
+d <- 3:12
+d
+# así de sencillo es
 
 # Intenta los siguientes y prueba con otras que se te vengan a la imaginación
 
@@ -71,6 +76,7 @@ sort(c(a,b), decreasing = F)
 (vector.by2 <- seq(from = 1, to = 10, by =2))
 
 (vector.by3 <- seq(1, 10, 3))
+
 
 # Para repetir un número o un vector un determinado número de ocasiones utilizamos rep
 
