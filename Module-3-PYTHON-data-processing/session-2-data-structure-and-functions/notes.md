@@ -8,3 +8,5 @@ Python toene dos estructuras de datos:
 
 - Lista []: Es una colleciòn ordenada de elementos de cualquier tipo, pueden repetirse los elementos. sin embargo no es la mejor idea combinar los tipos de datos. El índice empieza en 0
 - Diccionarios: Esta organizados por pares: llave-vlor, o están ordenados, son como objetos de js
+
+## Funciones
